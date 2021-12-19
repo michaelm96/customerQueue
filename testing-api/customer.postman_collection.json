@@ -1,0 +1,754 @@
+{
+	"info": {
+		"_postman_id": "f07c5c50-6e5a-43ff-8afc-ce4bf086efec",
+		"name": "customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create customer queue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "lombard",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1990-01-01",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "C",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "insert customer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "karen",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "female",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "1990-01-01",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "B",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-pzPIHN0xIxeltxPHqPEB400z2c8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:27:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"New queue created\",\n    \"result\": \"Your queue is B-2\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Customers queue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Customers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "570"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23a-4zYkoOYF0ByOTmgjM24XJ04mTIk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:20:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Data found\",\n    \"result\": [\n        {\n            \"_id\": \"61beb014b49c91097a807da5\",\n            \"username\": \"asdfgh\",\n            \"gender\": \"female\",\n            \"todayDate\": \"2021-12-19T04:07:48.409Z\",\n            \"birthday\": \"1989-12-31T17:00:00.000Z\",\n            \"queue\": 2,\n            \"type\": \"A\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61beb028b49c91097a807da8\",\n            \"username\": \"zxcvbn\",\n            \"gender\": \"female\",\n            \"todayDate\": \"2021-12-19T04:08:08.932Z\",\n            \"birthday\": \"1989-12-31T17:00:00.000Z\",\n            \"queue\": 1,\n            \"type\": \"B\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61beb039b49c91097a807dab\",\n            \"username\": \"poiuyt\",\n            \"gender\": \"male\",\n            \"todayDate\": \"2021-12-19T04:08:25.252Z\",\n            \"birthday\": \"1989-12-31T17:00:00.000Z\",\n            \"queue\": 3,\n            \"type\": \"A\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all customers queue based on type",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers/type/:type",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"type",
+						":type"
+					],
+					"variable": [
+						{
+							"key": "type",
+							"value": "B"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all queue based on type",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers/type/B",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"type",
+								"B"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-G9DaMKXeUOGGCDqDg5RyLi2QuJ0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:24:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Data found\",\n    \"result\": [\n        {\n            \"_id\": \"61beb028b49c91097a807da8\",\n            \"username\": \"zxcvbn\",\n            \"gender\": \"female\",\n            \"todayDate\": \"2021-12-19T04:08:08.932Z\",\n            \"birthday\": \"1989-12-31T17:00:00.000Z\",\n            \"queue\": 1,\n            \"type\": \"B\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all customers queue based on type and queue number",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "queue",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "A",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers/byQueue",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"byQueue"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all customers queue based on type and queue number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "queue",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "A",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers/byQueue",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"byQueue"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d6-NWczYWOW1RqyVeG8H/Lt7bYrryQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:25:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Data found\",\n    \"result\": [\n        {\n            \"_id\": \"61beb014b49c91097a807da5\",\n            \"username\": \"asdfgh\",\n            \"gender\": \"female\",\n            \"todayDate\": \"2021-12-19T04:07:48.409Z\",\n            \"birthday\": \"1989-12-31T17:00:00.000Z\",\n            \"queue\": 2,\n            \"type\": \"A\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get customers queue based on id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers/id/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						"id",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "61beb014b49c91097a807da5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get customers queue based on id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers/id/61beb014b49c91097a807da5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"id",
+								"61beb014b49c91097a807da5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d4-Sz02bP9bcgOtktfb8L4RLCYGRnM\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:25:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Data found\",\n    \"result\": {\n        \"_id\": \"61beb014b49c91097a807da5\",\n        \"username\": \"asdfgh\",\n        \"gender\": \"female\",\n        \"todayDate\": \"2021-12-19T04:07:48.409Z\",\n        \"birthday\": \"1989-12-31T17:00:00.000Z\",\n        \"queue\": 2,\n        \"type\": \"A\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update customers queue",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "bagong",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "birthday",
+							"value": "1900-12-12",
+							"type": "text"
+						},
+						{
+							"key": "queue",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Z",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "61beb014b49c91097a807da5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update customers queue",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "bagong",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "1900-12-12",
+									"type": "text"
+								},
+								{
+									"key": "queue",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Z",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers/61beb014b49c91097a807da5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61beb014b49c91097a807da5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "224"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e0-g7jwuSgr+6yheI9KWnyC8vKRte8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:31:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"customer data is updated\",\n    \"result\": {\n        \"_id\": \"61beb014b49c91097a807da5\",\n        \"username\": \"bagong\",\n        \"gender\": \"male\",\n        \"todayDate\": \"2021-12-19T04:07:48.409Z\",\n        \"birthday\": \"1900-12-12T00:00:00.000Z\",\n        \"queue\": 1,\n        \"type\": \"Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete customers queue",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/customers/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "61beb014b49c91097a807da5"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete customers queue",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/customers/61beb014b49c91097a807da5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"customers",
+								"61beb014b49c91097a807da5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-qLLINKDHSrNhW5SNUfi7pJsCXBA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Dec 2021 08:32:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"customer have been deleted\"\n}"
+				}
+			]
+		}
+	]
+}
